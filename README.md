@@ -18,3 +18,13 @@
 - make login api call with required details
 - install cors and add it as middleware for cors issue
 - make api calls with paramter credentials so that cookies are forward
+
+# Setup redux store
+
+- configure the store
+- Provide store to app
+- create user slice - name , initial state , action and reducer
+- update the user slice after login
+- fetch data from user slice using useSelector and update navbar
+- create config file for storing base url
+- refactor the code
