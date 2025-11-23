@@ -28,3 +28,12 @@
 - fetch data from user slice using useSelector and update navbar
 - create config file for storing base url
 - refactor the code
+
+#  login on page load and log out feature
+
+- validate token on page load
+- If token valid update user slice
+- redirect to login page if token is invalid
+- add client side routing for profile and home page
+- add log out api and navigate to log in page
+- handle invalid cred error message
