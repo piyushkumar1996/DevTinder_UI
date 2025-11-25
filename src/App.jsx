@@ -6,6 +6,8 @@ import Login from "./Pages/Login";
 import Profile from "./Pages/Profile";
 import Body from "./Pages/Body";
 import Feeds from "./Pages/Feeds";
+import Connection from "./Pages/Connection";
+import ConnectionRequest from "./Pages/ConnectionRequest";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/" element={<Feeds />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/connection" element={<Connection />} />
+          <Route path="/connectionRequest" element={<ConnectionRequest />} />
         </Route>
         <Route />
       </Routes>

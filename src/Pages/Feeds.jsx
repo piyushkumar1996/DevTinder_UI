@@ -1,9 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { BASE_URL } from "../config";
+import UserCard from "../components/UserCard";
 
 const Feeds = () => {
-  return (
-    <div>Feeds</div>
-  )
-}
+  const [feedData, setFeedData] = useState(null);
 
-export default Feeds
+  const getFeedData = async () => {
+    const res = await axios.get(`${BASE_URL}/user/feeds`, {
+      withCredentials: true,
+    });
+    setFeedData(res?.data?.data);
+  };
+
+  useEffect(() => {
+    getFeedData();
+  }, []);
+
+  return (
+    <div>
+      <h1>Feed</h1>
+      {feedData?.users ? <UserCard user={feedData?.users?.[0]} /> : null}
+    </div>
+  );
+};
+
+export default Feeds;
